@@ -1,0 +1,118 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>M/Other/</title>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+  </head>
+
+  <style>
+    body {
+      height: 20000px;
+/*        background-color: black;*/
+    }
+    .video-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+        float: left;
+      width: 100%;
+        z-index: 1;
+/*        filter: invert(1);*/
+    }
+    video {
+      position: relative;
+      z-index: 0;
+        
+    }
+  
+      .shorts{
+          display: none;
+          position: static;
+        width: 30%;  
+          height: 100%;
+          float: right;
+          top: 0;
+          right: 0;
+          overflow-x: scroll;
+/*          background-color: black;*/
+          z-index: 999999;
+          cursor: pointer;
+      }
+      
+        .shorts1{
+          position: absolute;
+        width: 100%;  
+          height: 100%;
+          float: left;
+          top: 0;
+          left: 0;
+/*          background-color: black;*/
+          z-index: 999999;
+          cursor: pointer;
+      }
+      
+      #short1{
+          top:   20%;
+          left: 70%;
+      }
+      
+      #short2{
+          top:250%;
+      }
+      .flyer {
+          position: fixed;
+          z-index: 999999;
+          bottom:0;
+          transform: rotate(4deg);
+          border: 1px solid black;
+      }
+      
+
+  </style>
+<body>
+
+<div class="video-wrapper">
+  <video width="100%" height="auto" id="timelapse" preload>
+    <source src="wordmaking.mp4" type="video/mp4">
+  </video>
+    </div>
+<!--
+    <div class="shorts">
+        <p style="color: white">Click to play the videos :&#41;</p>
+    <video onclick="this.paused ? this.play() : this.pause();" width="100%" height="auto" id="short1" preload="none" poster="short1.png" >
+    <source src="Short1.mp4" type="video/mp4">
+  </video>
+    <video onclick="this.paused ? this.play() : this.pause();" width="100%" height="auto" id="short2" preload="none" poster="short2.png" >
+        <source src="Short2.mp4" type="video/mp4"></video>
+    </div>
+-->
+    
+      <div class="shorts1">
+    <video onclick="this.paused ? this.play() : this.pause();" width="20%" height="100%" id="short1" preload="none" poster="short1.png" >
+    <source src="Short1.mp4" type="video/mp4">
+  </video>
+    <video onclick="this.paused ? this.play() : this.pause();" width="20%" height="100%" id="short2" preload="none" poster="short2.png" >
+        <source src="Short2.mp4" type="video/mp4"></video>
+    </div>
+    
+    <div class="flyer"><img src="flyer1.jpg"></div>
+
+  <script>
+      var v = document.getElementById('timelapse');
+      $(window).scroll(function(){
+        if(v.readyState > 0){
+          var d = v.duration;
+          var w =  $('body').height();
+          var h = $(window).height();
+          var t, p;
+          t = $(window).scrollTop();
+          p = (t+h)/w;
+          v.currentTime = p*d;
+          $('.progress').css('width', p*60 + '%');
+        }
+      });
+  </script>
+
+</body>
+</html>
