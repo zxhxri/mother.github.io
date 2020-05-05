@@ -9,6 +9,7 @@
   <style>
     body {
       height: 8000px;
+        background-color: black;
     }
     .video-wrapper {
       position: fixed;
@@ -17,10 +18,12 @@
         float: left;
       width: 69%;
         z-index: 1;
+        filter: invert(1);
     }
     video {
       position: relative;
       z-index: 0;
+        
     }
   
       .shorts{
@@ -33,6 +36,15 @@
           overflow-x: scroll;
           background-color: black;
           z-index: 999999;
+          cursor: pointer;
+      }
+      
+      .flyer {
+          position: fixed;
+          z-index: 999999;
+          bottom:0;
+          transform: rotate(4deg);
+          border: 1px solid black;
       }
       
 
@@ -46,12 +58,14 @@
     </div>
    
     <div class="shorts">
-    <video onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;" width="100%" height="auto" id="short1" poster="short1.png">
+    <video onclick="this.paused ? this.play() : this.pause();" width="100%" height="auto" id="short1" poster="short1.png">
     <source src="Short1.mp4" type="video/mp4">
   </video>
-    <video onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;" width="100%" height="auto" id="short2" preload  autoplay>
+    <video onclick="this.paused ? this.play() : this.pause();" width="100%" height="auto" id="short2" poster="short2.png">
         <source src="Short2.mp4" type="video/mp4"></video>
     </div>
+    
+    <div class="flyer"><img src="flyer1.jpg"></div>
 
   <script>
       var v = document.getElementById('timelapse');
