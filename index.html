@@ -2,14 +2,14 @@
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>M/Other/</title>
+    <title>M&#40;Other&#41;</title>
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
 </head>
 
 <style>
     body {
         height: 20000px;
-        /*        background-color: black;*/
+                background-color: black;
     }
     
     .bottomMenu, .bottomMenu2, .bottomMenu3 {
@@ -23,13 +23,25 @@
     z-index: 1;
       left: 0;
       right: 0;
+        pointer-events: none;
 }
 
 .bottomMenu img, .bottomMenu2 img, .bottomMenu3 img {
-  width: 100%;
-    height: 100%;
+/*  width: 100%;*/
+    height: auto;
 
 }
+    
+    ::-webkit-scrollbar {
+    display: none;
+  }
+    
+    .bottomMenu img{
+        position: fixed;
+        left: 25%;
+        top: 25%;
+        width: 15%;
+    }
 
     .video-wrapper {
         position: fixed;
@@ -38,96 +50,133 @@
         float: left;
         width: 100%;
         z-index: 1;
-       
+       pointer-events: none;
                 filter: invert(1);
          mix-blend-mode: screen;
         z-index: 999999;
+        
     }
 
     video {
         position: relative;
-/*        z-index: 0;*/
-
     }
-
-    .shorts {
-        display: none;
-        position: static;
-        width: 30%;
-        height: 100%;
-        float: right;
-        top: 0;
-        right: 0;
-        overflow-x: scroll;
-        /*          background-color: black;*/
-        z-index: 999999;
-        cursor: pointer;
-    }
-
+    
     .shorts1 {
-        position: absolute;
+        position: fixed;
         width: 100%;
         height: 100%;
         float: left;
         top: 0;
         left: 0;
         /*          background-color: black;*/
-        z-index: 999999;
-        cursor: pointer;
+/*        z-index: ;*/
+        cursor: cell;
     }
 
-    #short1 {
-        top: 20%;
-        left: 70%;
+    #short1, #short3 {
+        -webkit-filter: grayscale(100%);
+   -moz-filter: grayscale(100%);
+   filter: grayscale(100%);
+   transition: all 0.5s ease;
+        opacity: 0.4;
+        float: left;
+    }
+    
+    #short1:hover, #short3:hover{
+/*
+ transition: .8s ease-in-out;
+        opacity: 1;
+*/
+        opacity: 1;
+        -webkit-filter: grayscale(0%);
+   -moz-filter: grayscale(0%);
+   filter: grayscale(0%);
     }
 
     #short2 {
-        top: 250%;
+opacity: 0.2;
+         transition: .8s ease-in-out;
+        float: left;
+    }
+    
+    #short2:hover {
+ transition: .8s ease-in-out;
+        opacity: 1;
     }
 
-    .flyer {
+    #draggable {
         position: fixed;
         z-index: 999999;
         bottom: 0;
+        width: 5%;
+        height: auto;
         transform: rotate(4deg);
-        border: 1px solid black;
+        transition: 0.3s;
+/*        border: 1px solid black;*/
     }
+    
+    #draggable:hover{
+        width: 6%;
+        cursor: grab;
+    }
+    
+     #draggable:active{
+        cursor: grabbing;
+         width: 18%;
+    }
+    
+    #draggable img{
+/*        width: 50%;*/
+    }
+    
+    #scroll{
+        bottom: 0;
+        right: 2%;
+        position: absolute;
+        width: 5%;
+        opacity: 0.7;
+    }
+    #divider{
+        display: inline-block;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: auto;
+        position: fixed;
+        margin: 0 auto;
+        z-index: 999999;
+        pointer-events: none;
+    }
+    
 </style>
 
 <body>
+    
+    <img src="scroll.gif" id="scroll"/>
+    
+    <div class="bottomMenu" id="draggable2"><img src=""></div>
 
-    <div class="bottomMenu"><img src="https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png"></div>
+<div class="bottomMenu2"><img src=""></div>
 
-<div class="bottomMenu2"><img src="https://pics.clipartpng.com/midle/White_Face_Mask_PNG_Clipart-3285.png"></div>
-
-<div class="bottomMenu3"><img src="https://onlinepngtools.com/images/examples-onlinepngtools/clouds-transparent.png
-"></div>
+<div class="bottomMenu3"><img src=""></div>
     
     <div class="video-wrapper">
         <video width="100%" height="auto" id="timelapse" preload>
             <source src="wordmaking.mp4" type="video/mp4">
         </video>
     </div>
-    <!--
-    <div class="shorts">
-        <p style="color: white">Click to play the videos :&#41;</p>
-    <video onclick="this.paused ? this.play() : this.pause();" width="100%" height="auto" id="short1" preload="none" poster="short1.png" >
-    <source src="Short1.mp4" type="video/mp4">
-  </video>
-    <video onclick="this.paused ? this.play() : this.pause();" width="100%" height="auto" id="short2" preload="none" poster="short2.png" >
-        <source src="Short2.mp4" type="video/mp4"></video>
-    </div>
--->
-
+    
     <div class="shorts1">
-        <video onclick="this.paused ? this.play() : this.pause();" width="20%" height="100%" id="short1" preload="none" poster="short1.png">
+        <video onclick="this.paused ? this.play() : this.pause();" \ height="100%" id="short1" preload="none" poster="short1.png">
             <source src="Short1.mp4" type="video/mp4">
         </video>
-        <video onclick="this.paused ? this.play() : this.pause();" width="20%" height="100%" id="short2" preload="none" poster="short2.png">
+        <video onclick="this.paused ? this.play() : this.pause();"  height="100%" id="short2" preload="none" poster="short2.png">
             <source src="Short2.mp4" type="video/mp4"></video>
+        
+       
     </div>
 
-    <div class="flyer"><img src="flyer1.jpg"></div>
+    <div id="draggable" class="ui-widget-content"><img src="flyer1.png" width="100%"></div>
 
     <script>
         var v = document.getElementById('timelapse');
@@ -178,5 +227,15 @@ $(document).scroll(function () {
 
 });
 </script>
+    
+     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+    <script>
+  $( function() {
+    $( "#draggable" ).draggable();
+  } );
+        
+  </script>
 
 </body></html>
