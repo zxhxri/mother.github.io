@@ -8,6 +8,10 @@
 </head>
 
 <style>
+    
+    html{
+        background-color: black;
+    }
     body {
         height: 20000px;
         background-color: black;
@@ -60,16 +64,19 @@
         width: 100%;
         z-index: 1;
         pointer-events: none;
-        filter: invert(1);
-        mix-blend-mode: screen;
+        mix-blend-mode:screen;
         z-index: 999999;
 
     }
 
     video {
         position: relative;
+        
     }
-
+    #timelapse{
+        filter: invert(1);
+    }
+    
     .shorts1 {
         position: fixed;
         width: 100%;
@@ -211,7 +218,7 @@
 
     </script>
 
-    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
 
     <!--
     <script>
