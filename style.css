@@ -1,0 +1,361 @@
+@font-face {
+    font-family: Pliska;
+    src: url(fonts/Pliska-Regular.otf);
+}
+
+@font-face {
+    font-family: PliskaBold;
+    src: url(fonts/Pliska-Bold.otf);
+}
+
+@font-face {
+    font-family: FreeSans;
+    src: url(fonts/FreeSans.otf);
+}
+
+@font-face {
+    font-family: AWT1;
+    src: url(fonts/AWTHamiltonGothicExtended.ttf);
+}
+
+@font-face {
+    font-family: AWT2;
+    src: url(fonts/AWTHamiltonGothicLight.ttf);
+}
+
+@font-face {
+    font-family: AWT3;
+    src: url(fonts/AWTNesbittGothic.ttf);
+}
+
+@font-face {
+    font-family: AWT4;
+    src: url(fonts/AWTPageGothicLightFace.ttf);
+}
+
+@font-face {
+    font-family: Soyuz;
+    src: url(fonts/SoyuzGroteskBold.otf);
+}
+
+html {
+    /*    background-color: black;*/
+}
+
+body {
+    height: 20000px;
+    background-color: whitesmoke;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-block-start: 0;
+    padding-block-end: 0;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+}
+
+#intro {
+    background-color: white;
+    z-index: 13;
+    height: 100%;
+    position: absolute;
+    top: -150%;
+    width: 100%;
+    transition: top 1s;
+    -moz-transition: top 1s;
+    -webkit-transition: top 1s;
+    -o-transition: top 1s;
+}
+
+#intro.visible {
+    top: 0px;
+}
+
+.progress-container {
+    bottom: 0;
+    position: fixed;
+  width: 100%;
+  height: 8px;
+  background: transparent;
+    z-index: 13;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 8px;
+  background: orangered;
+  width: 0%;
+}
+
+#intro p {
+    width: 45%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+#buttonintro{
+    position: fixed;
+    z-index: 12;
+    right: 10px;
+    bottom: 10px;
+    font-family: 'FreeSans';
+    font-size: 20px;
+}
+
+#buttonintro a{
+    text-decoration: none;
+    color: black;
+}
+
+.grid2x2 {
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    box-shadow: 0px 0px 15px rgba(34, 34, 34, 0.6);
+}
+
+.grid2x2 > div {
+    display: flex;
+    flex-basis: calc(50% - 40px);
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.grid2x2 > div > div {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.box {
+    margin: 20px;
+}
+
+.box1 {
+    background-color: white;
+    color: black;
+    font-family: 'AWT3';
+    font-size: 4.3vw;
+    text-align: center;
+    word-break: break-all;
+}
+
+#parenthesis{
+    font-family: Soyuz;
+    text-justify: none;
+}
+
+.box2 {
+    background-color: white;
+    color: black;
+    font-size: 1.2vw;
+    font-family: Futura;
+}
+
+.box3 {
+    background-color: white;
+    color: black;
+    font-size: 1.2vw;
+    font-family: Futura;
+    
+}
+
+.box4 {
+    background-color: orangered;
+    font-size: 4vw;
+    text-align: center;
+}
+
+.prop-frame{
+    position: fixed;
+    width: 45%;
+    right: 0;
+    bottom: 40px;
+    z-index: 13;
+}
+
+.prop-frame img{
+    width: 100%;
+}
+
+.word-frame {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+    width: 20%;
+}
+
+.word-frame img {
+    width: 100%;
+    position: absolute;
+    border: 2px solid yellow;
+}
+
+#chat{
+    position: absolute;
+    z-index: 13;
+    width: 100%;
+    
+}
+
+#chat iframe{
+    width: 100%;
+}
+
+.bottomMenu,
+.bottomMenu2,
+.bottomMenu3 {
+    display: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.video-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    float: left;
+    width: 100%;
+    z-index: 1;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    z-index: 3;
+
+}
+
+video {
+    position: relative;
+
+}
+
+#timelapse {
+    filter: invert(1);
+}
+
+.shorts1 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    float: left;
+    top: 0;
+    left: 0;
+    cursor: cell;
+}
+
+#short1,
+#short2,
+#short3 {
+    height: 100%;
+}
+
+#short1,
+#short2,
+#short3 {
+
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: all 0.5s ease;
+    float: left;
+}
+
+#short1:hover,
+#short2:hover,
+#short3:hover {
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+
+#draggable {
+    position: fixed;
+    z-index: 12;
+    bottom: 0;
+    width: 5%;
+    height: auto;
+    transform: rotate(4deg);
+    transition: 0.3s;
+    /*        border: 1px solid black;*/
+}
+
+#draggable:hover {
+    width: 6%;
+    cursor: grab;
+}
+
+#draggable:active {
+    cursor: grabbing;
+    width: 18%;
+}
+
+#scroll {
+    bottom: -25%;
+    right: 2%;
+    position: absolute;
+    width: 5%;
+    opacity: 0.7;
+    filter: invert(1);
+}
+
+#divider {
+    display: inline-block;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: auto;
+    position: fixed;
+    margin: 0 auto;
+    z-index: 999999;
+    pointer-events: none;
+}
+
+
+.dragscroll {
+    width: 55%;
+    left: 0;
+    height: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 11;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    cursor: -webkit-grab;
+    cursor: grab;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    box-shadow: 5px 0px 5px rgba(34, 34, 34, 0.6);
+    background-color: transparent;
+
+}
+
+
+.card:active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+}
+
+.card {
+    display: inline-block;
+    height: 100%;
+}

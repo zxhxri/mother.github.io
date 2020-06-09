@@ -14,215 +14,66 @@
 
     <link rel="stylesheet" href="style.css">
 
-    
-    </head>
+
+</head>
 
 <head>
     <meta charset="utf-8" />
     <title>M&#40;Other&#41;</title>
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+
 </head>
 
-<style>
-    
-    html{
-        background-color: black;
-    }
-    body {
-        height: 20000px;
-        background-color: black;
-    }
-
-    * {
-        box-sizing: border-box;
-    }
-    
-    .word-frame{
-        position: fixed;
-        top: 10px;
-        right: 10px;
-        z-index: 999999;
-        width: 20%;
-    }
-    
-    .word-frame img{
-        width: 100%;
-        position: absolute;
-    }
-
-    .bottomMenu,
-    .bottomMenu2,
-    .bottomMenu3 {
-        display: none;
-/*
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-        border-top: 1px solid #000;
-        background: transparent;
-        z-index: 1;
-        left: 0;
-        right: 0;
-        pointer-events: none;
-*/
-    }
-
-    .bottomMenu img,
-    .bottomMenu2 img,
-    .bottomMenu3 img {
-        /*  width: 100%;*/
-/*        height: auto;*/
-
-    }
-
-    ::-webkit-scrollbar {
-        display: none;
-    }
-
-    .bottomMenu img {
-/*        width: 15%;*/
-    }
-
-    .video-wrapper {
-        position: fixed;
-        top: 0;
-        left: 0;
-        float: left;
-        width: 100%;
-        z-index: 1;
-        pointer-events: none;
-        mix-blend-mode:screen;
-        z-index: 999999;
-
-    }
-
-    video {
-        position: relative;
-        
-    }
-    #timelapse{
-        filter: invert(1);
-    }
-    
-    .shorts1 {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        float: left;
-        top: 0;
-        left: 0;
-        /*          background-color: black;*/
-        /*        z-index: ;*/
-        cursor: cell;
-    }
-
-    #short1,
-    #short3 {
-        -webkit-filter: grayscale(100%);
-        -moz-filter: grayscale(100%);
-        filter: grayscale(100%);
-        transition: all 0.5s ease;
-        opacity: 0.4;
-        float: left;
-    }
-
-    #short1:hover,
-    #short3:hover {
-        /*
- transition: .8s ease-in-out;
-        opacity: 1;
-*/
-        opacity: 1;
-        -webkit-filter: grayscale(0%);
-        -moz-filter: grayscale(0%);
-        filter: grayscale(0%);
-    }
-
-    #short2 {
-        opacity: 0.2;
-        transition: .8s ease-in-out;
-        float: left;
-    }
-
-    #short2:hover {
-        transition: .8s ease-in-out;
-        opacity: 1;
-    }
-
-    #draggable {
-        position: fixed;
-        z-index: 999999;
-        bottom: 0;
-        width: 5%;
-        height: auto;
-        transform: rotate(4deg);
-        transition: 0.3s;
-        /*        border: 1px solid black;*/
-    }
-
-    #draggable:hover {
-        width: 6%;
-        cursor: grab;
-    }
-
-    #draggable:active {
-        cursor: grabbing;
-        width: 18%;
-    }
-
-    #draggable img {
-        /*        width: 50%;*/
-    }
-
-    #scroll {
-        bottom: 0;
-        right: 2%;
-        position: absolute;
-        width: 5%;
-        opacity: 0.7;
-    }
-
-    #divider {
-        display: inline-block;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: auto;
-        position: fixed;
-        margin: 0 auto;
-        z-index: 999999;
-        pointer-events: none;
-    }
-    #sidebar-wrapper{
-        z-index: 999999;
-        position: fixed;
-        width: 20%;
-        height: 100%;
-        top: 0;
-    }
-    
-    
-
-</style>
 
 <body>
+    <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+    <div id="intro">
+        <div class="grid2x2">
+            <div class="box box1">
+                <div>M<span id="parenthesis">&#40;</span>Other<span id="parenthesis">&#41;</span>&nbsp;<br>Tongue:</div>
+            </div>
+            <div class="box box2">
+                <div>I want to question our human-centric role on this planet. Understanding that our existence has never been self-reliant. We feed off of others and they feed of of us.  The disparity between humans with different biological, sexual, political, economic circumstances. I acknowledge language as a driving force in the way we perceive one another. Word-making is a political act. By understanding how language creates conventions, we can play with it to subvert them. Language is based on collective understandings of things, but they can also be created by those with more power. We need open access, free thought to generate alternative knowledge for a progressive life together.</div>
+            </div>
+            <div class="box box3">
+                <div>Fermentation&#125; collective transformation of a substance is a process which inspired this narrative. An alien ritual in our homes. Microbes eat, we eat, then more microorganisms eat. The table is a stage for interactions. During the Graduation Show I will explore how language and taste collide in a series of Tongue Activities.</div>
+            </div>
+            <div class="box box4">
+                <div>Language and Taste<br>&lt;————————&gt;</div>
+            </div>
+        </div>
 
+ <div class="programme"></div>
+    </div>
     <img src="scroll.gif" id="scroll" />
-   
-  <div id="sidebar-wrapper"><iframe name="embed_readwrite" src="https://pad.riseup.net/p/m(other)-keep?showControls=true&showChat=true&showLineNumbers=true&useMonospaceFont=false" width="100%" height="100%" frameborder="0"></iframe></div>
+
     
-           <div class="word-frame">
-               <img class="bottomMenu" src="images/one.jpg">
-               
-               <img class="bottomMenu2" src="images/two.jpg">
-               
-               <img class="bottomMenu3" src="images/three.jpg">
+    <p id="buttonintro"><a href="#intro">Intro</a> <a href="#chat">Chat</a></p>
+
+    <div class="word-frame">
+        <img class="bottomMenu" src="images/one.jpg">
+
+        <img class="bottomMenu2" src="images/two.jpg">
+
+        <img class="bottomMenu3" src="images/three.jpg">
+
+
+    </div>
     
+    <div class="prop-frame">
+    <img class="prop1" src="images/prop1.png">
+    </div>
+
+<!--
+    <div id="chat">
+    <iframe src="https://docs.google.com/document/d/e/2PACX-1vQZ8PmLHx2LCalFzSMs5fPiHfqV1XtZr1FFc8ctV1Nqk-567M3PRo9nscjQIKjDLcSglZvWF9BEtR62/pub?embedded=true"></iframe>
     
     </div>
-       
-<!--
+-->
+    
+    <!--
     <div class="video-wrapper" >
         <video width="100%" height="auto" id="timelapse" preload>
             <source src="wordmaking.mp4" type="video/mp4">
@@ -230,73 +81,95 @@
     </div>
 -->
 
-    <div class="shorts1">
-        <video onclick="this.paused ? this.play() : this.pause();" \ height="100%" id="short1" preload="none" poster="short1.png">
-            <source src="Short1.mp4" type="video/mp4">
-        </video>
-        <video onclick="this.paused ? this.play() : this.pause();" height="100%" id="short2" preload="none" poster="short2.png">
-            <source src="Short2.mp4" type="video/mp4"></video>
-        <video onclick="this.paused ? this.play() : this.pause();" height="100%" id="short3" preload="none" poster="short3.png">
-            <source src="Short3.mp4" type="video/mp4"></video>
+    <div class="dragscroll">
+        <div class="card"> <video onclick="this.paused ? this.play() : this.pause();" height="90%" id="short1" preload="none" poster="short1.png">
+                <source src="Short1.mp4" type="video/mp4">
+            </video></div>
+        <div class="card"><video onclick="this.paused ? this.play() : this.pause();" height="100%" id="short2" preload="none" poster="short2.png">
+                <source src="Short2.mp4" type="video/mp4"></video></div>
+        <div class="card"><video onclick="this.paused ? this.play() : this.pause();" height="100%" id="short3" preload="none" poster="short3.png">
+                <source src="Short3.mp4" type="video/mp4"></video></div>
+        <div class="card"><video onclick="this.paused ? this.play() : this.pause();" height="100%" id="short3" preload="none" poster="short3.png">
+                <source src="Short3.mp4" type="video/mp4"></video></div>
 
 
     </div>
 
+
     <div id="draggable" class="ui-widget-content"><img src="flyer1.png" width="100%"></div>
 
     <script>
-        var v = document.getElementById('timelapse');
-        $(window).scroll(function() {
-            if (v.readyState > 0) {
-                var d = v.duration;
-                var w = $('body').height();
-                var h = $(window).height();
-                var t, p;
-                t = $(window).scrollTop();
-                p = (t + h) / w;
-                v.currentTime = p * d;
-                $('.progress').css('width', p * 60 + '%');
-            }
+    window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+    </script>
+    
+   <script>
+   $(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 2500);
+});
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#intro").addClass("visible");
         });
 
     </script>
-    
-    
 
-    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
-
-    
     <script>
-        $(document).scroll(function () {
-    var y = $(this).scrollTop();
-    if (y > 1000 ) {
-        $('.bottomMenu').fadeIn();
-    } else {
-        $('.bottomMenu').fadeOut();
-    }
+        $(document).scroll(function() {
+            var y = $(this).scrollTop();
+            if (y > 1000) {
+                $('.bottomMenu').fadeIn();
+            } else {
+                $('.bottomMenu').fadeOut();
+            }
 
-});
+        });
 
-$(document).scroll(function () {
-    var y = $(this).scrollTop();
-    if (y > 2000 ) {
-        $('.bottomMenu2').fadeIn();
-    } else {
-        $('.bottomMenu2').fadeOut();
-    }
+        $(document).scroll(function() {
+            var y = $(this).scrollTop();
+            if (y > 2000) {
+                $('.bottomMenu2').fadeIn();
+            } else {
+                $('.bottomMenu2').fadeOut();
+            }
 
-});
+        });
 
-$(document).scroll(function () {
-    var y = $(this).scrollTop();
-    if (y > 2400 ) {
-        $('.bottomMenu3').fadeIn();
-    } else {
-        $('.bottomMenu3').fadeOut();
-    }
+        $(document).scroll(function() {
+            var y = $(this).scrollTop();
+            if (y > 2400) {
+                $('.bottomMenu3').fadeIn();
+            } else {
+                $('.bottomMenu3').fadeOut();
+            }
 
-});
-</script>
+        });
+        
+          $(document).scroll(function() {
+            var y = $(this).scrollTop();
+            if (y > 2500 && y < 2800) {
+                $('.prop1').fadeIn();
+            } else {
+                $('.prop1').fadeOut();
+            }
+
+        });
+        
+        
+
+    </script>
+
 
 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -308,6 +181,9 @@ $(document).scroll(function () {
         });
 
     </script>
+
+    <script type="text/javascript" src="https://cdn.rawgit.com/asvd/dragscroll/master/dragscroll.js"></script>
+    <!--        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
 
 
 </body>
