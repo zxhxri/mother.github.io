@@ -190,6 +190,7 @@ p {
 }
 
 .prop-frame img{
+        display: none;
     width: 100%;
 }
 
