@@ -1,43 +1,28 @@
 <!doctype html>
-<html class="no-js" lang="en">
 
+<html lang="en">
 <head>
-    <meta charset=“UTF-8”>
-        <meta name=“viewport” content=“width=device-width, initial-scale=1.0”>
-        <meta http-equiv=“X-UA-Compatible” content=“ie=edge”>
-and then <link rel=“stylesheet” type=“text/css” href=“style.css”>
-    
-    <title>M(Other)</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
 
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="apple-touch-icon" href="icon.png">
+  <title>M&#40;Other&#41;</title>
+  <meta name="description" content="Mother">
+  <meta name="author" content="SitePoint">
 
-  
-
+  <link rel="stylesheet" href="style.css">
 
 </head>
-
-<head>
-    <meta charset="utf-8" />
-    <title>M&#40;Other&#41;</title>
-    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
-
-</head>
-
 
 <body>
     <div class="progress-container">
-    <div class="progress-bar" id="myBar"></div>
-  </div>
+        <div class="progress-bar" id="myBar"></div>
+    </div>
     <div id="intro">
         <div class="grid2x2">
             <div class="box box1">
                 <div>M<span id="parenthesis">&#40;</span>Other<span id="parenthesis">&#41;</span>&nbsp;<br>Tongue:</div>
             </div>
             <div class="box box2">
-                <div>I want to question our human-centric role on this planet. Understanding that our existence has never been self-reliant. We feed off of others and they feed of of us.  The disparity between humans with different biological, sexual, political, economic circumstances. I acknowledge language as a driving force in the way we perceive one another. Word-making is a political act. By understanding how language creates conventions, we can play with it to subvert them. Language is based on collective understandings of things, but they can also be created by those with more power. We need open access, free thought to generate alternative knowledge for a progressive life together.</div>
+                <div>I want to question our human-centric role on this planet. Understanding that our existence has never been self-reliant. We feed off of others and they feed of of us. The disparity between humans with different biological, sexual, political, economic circumstances. I acknowledge language as a driving force in the way we perceive one another. Word-making is a political act. By understanding how language creates conventions, we can play with it to subvert them. Language is based on collective understandings of things, but they can also be created by those with more power. We need open access, free thought to generate alternative knowledge for a progressive life together.</div>
             </div>
             <div class="box box3">
                 <div>Fermentation&#125; collective transformation of a substance is a process which inspired this narrative. An alien ritual in our homes. Microbes eat, we eat, then more microorganisms eat. The table is a stage for interactions. During the Graduation Show I will explore how language and taste collide in a series of Tongue Activities.</div>
@@ -47,11 +32,11 @@ and then <link rel=“stylesheet” type=“text/css” href=“style.css”>
             </div>
         </div>
 
- <div class="programme"></div>
+        <div class="programme"></div>
     </div>
     <img src="scroll.gif" id="scroll" />
 
-    
+
     <p id="buttonintro"><a href="#intro">Intro</a> <a href="#chat">Chat</a></p>
 
     <div class="word-frame">
@@ -63,18 +48,18 @@ and then <link rel=“stylesheet” type=“text/css” href=“style.css”>
 
 
     </div>
-    
+
     <div class="prop-frame">
-    <img class="prop1" src="images/prop1.png">
+        <img class="prop1" src="images/prop1.png">
     </div>
 
-<!--
+    <!--
     <div id="chat">
     <iframe src="https://docs.google.com/document/d/e/2PACX-1vQZ8PmLHx2LCalFzSMs5fPiHfqV1XtZr1FFc8ctV1Nqk-567M3PRo9nscjQIKjDLcSglZvWF9BEtR62/pub?embedded=true"></iframe>
     
     </div>
 -->
-    
+
     <!--
     <div class="video-wrapper" >
         <video width="100%" height="auto" id="timelapse" preload>
@@ -100,25 +85,31 @@ and then <link rel=“stylesheet” type=“text/css” href=“style.css”>
 
     <div id="draggable" class="ui-widget-content"><img src="flyer1.png" width="100%"></div>
 
-    <script>
-    window.onscroll = function() {myFunction()};
-
-function myFunction() {
-  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  var scrolled = (winScroll / height) * 100;
-  document.getElementById("myBar").style.width = scrolled + "%";
-}
-    </script>
+     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
     
-   <script>
-   $(document).on('click', 'a[href^="#"]', function (event) {
-    event.preventDefault();
+    <script>
+        window.onscroll = function() {
+            myFunction()
+        };
 
-    $('html, body').animate({
-        scrollTop: $($.attr(this, 'href')).offset().top
-    }, 2500);
-});
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        }
+
+    </script>
+
+    <script>
+        $(document).on('click', 'a[href^="#"]', function(event) {
+            event.preventDefault();
+
+            $('html, body').animate({
+                scrollTop: $($.attr(this, 'href')).offset().top
+            }, 2500);
+        });
+
     </script>
     <script>
         $(document).ready(function() {
@@ -157,8 +148,8 @@ function myFunction() {
             }
 
         });
-        
-          $(document).scroll(function() {
+
+        $(document).scroll(function() {
             var y = $(this).scrollTop();
             if (y > 2500 && y < 2800) {
                 $('.prop1').fadeIn();
@@ -167,8 +158,6 @@ function myFunction() {
             }
 
         });
-        
-        
 
     </script>
 
@@ -185,7 +174,7 @@ function myFunction() {
     </script>
 
     <script type="text/javascript" src="https://cdn.rawgit.com/asvd/dragscroll/master/dragscroll.js"></script>
-    <!--        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+   
 
 
 </body>
