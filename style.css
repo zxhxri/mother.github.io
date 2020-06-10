@@ -68,7 +68,7 @@ p {
 
 #intro {
     background-color: white;
-    z-index: 13;
+    z-index: 15;
     height: 100%;
     position: absolute;
     top: -150%;
@@ -86,39 +86,135 @@ p {
 .progress-container {
     bottom: 0;
     position: fixed;
-  width: 100%;
-  height: 8px;
-  background: transparent;
+    width: 100%;
+    height: 8px;
+    background: transparent;
     z-index: 13;
 }
 
 /* The progress bar (scroll indicator) */
 .progress-bar {
-  height: 8px;
-  background: orangered;
-  width: 0%;
+    height: 8px;
+    background: orangered;
+    width: 0%;
+    border-radius: 5px;
 }
 
-#intro p {
-    width: 45%;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 1.5vw;
+.title {
+    position: absolute;
+    left: 20px;
+    font-family: monospace;
+    font-size: 1vw;
+    color: red;
 }
 
-#buttonintro{
+#buttonintro {
     position: fixed;
     z-index: 12;
-    right: 10px;
+    right: 40%;
+    top: 0;
+    font-family: 'FreeSans';
+    font-size: 20px;
+    width: auto;
+    padding: 1px 6px;
+    height: auto;
+    background-color: blue;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#buttonintro a {
+    text-decoration: none;
+    color: white;
+}
+
+#buttons a {
+    text-decoration: none;
+    color: black;
+}
+
+#buttons {
+    position: fixed;
+    z-index: 12;
+    right: 2%;
     bottom: 10px;
+    font-family: 'FreeSans';
+    font-size: 1.5vw;
+    padding: 1px 6px;
+}
+
+.dropbtn, .dropbtn2 {
+    background-color: transparent;
+    color: black;
+/*    padding: 16px;*/
+    font-size: 1.5vw;
+    font-family: 'FreeSans';
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown2 {
+    position: fixed;
+    display: inline-block;
+    right: 24%;
+    bottom: 10px;
+    z-index: 14;
+}
+
+.dropdown {
+    position: fixed;
+    display: inline-block;
+    right: 11%;
+    bottom: 10px;
+    z-index: 14;
+}
+
+.dropdown-content, .dropdown-content2 {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+/*    min-width: 160px;*/
+    min-width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+bottom: 30px;
+}
+
+.dropdown-content a, .dropdown-content2 a {
+    color: black;
+   
+    font-family: 'FreeSans';
+    font-size: 20px;
+    padding: 0px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover, .dropdown-content2 a:hover {background-color: orangered;  color: white;}
+
+.dropdown:hover .dropdown-content, .dropdown2:hover .dropdown-content2 {
+    display: block;
+}
+
+.dropdown:hover .dropbtn, .dropdown2:hover .dropbtn2, #buttons:hover {
+    background-color: orangered;
+}
+
+#footer {
+    position: fixed;
+    bottom: -20000px;
+    right: 0;
+}
+
+.prog {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 25%;
     font-family: 'FreeSans';
     font-size: 20px;
 }
 
-#buttonintro a{
-    text-decoration: none;
-    color: black;
-}
 
 .grid2x2 {
     min-height: 100%;
@@ -148,40 +244,46 @@ p {
 
 .box1 {
     background-color: white;
-    color: black;
-    font-family: 'AWT3';
-    font-size: 4.3vw;
-    text-align: center;
-    word-break: break-all;
+
+    /*    word-break: break-all;*/
 }
 
-#parenthesis{
-    font-family: Soyuz;
-    text-justify: none;
+.box1 p {
+    color: black;
+    font-family: 'AWT3';
+    font-size: 6.7vw;
+    text-align: center;
+    letter-spacing: -0.3vw;
+}
+
+#parenthesis {
+    font-family: 'Soyuz';
+    line-height: 5.2vw;
 }
 
 .box2 {
     background-color: white;
-    color: black;
+    color: darkslateblue;
     font-size: 1.2vw;
-    font-family: Futura;
+    font-family: 'FreeSans', sans-serif;
 }
 
 .box3 {
     background-color: white;
     color: black;
     font-size: 1.2vw;
-    font-family: Futura;
-    
+    font-family: 'FreeSans', sans-serif;
+
 }
 
 .box4 {
     background-color: orangered;
     font-size: 4vw;
     text-align: center;
+    font-family: Times, serif;
 }
 
-.prop-frame{
+.prop-frame {
     position: fixed;
     width: 45%;
     right: 0;
@@ -189,8 +291,8 @@ p {
     z-index: 13;
 }
 
-.prop-frame img{
-        display: none;
+.prop-frame img {
+    display: none;
     width: 100%;
 }
 
@@ -199,31 +301,48 @@ p {
     top: 10px;
     right: 10px;
     z-index: 10;
-    width: 20%;
+    width: 28%;
 }
 
 .word-frame img {
     width: 100%;
     position: absolute;
-    border: 2px solid yellow;
+    border: 1px solid black;
+    border-radius: 3px;
 }
 
-#chat{
+.word-frame p {
+    font-family: 'FreeSans';
+    font-size: 20px;
+    text-align: center;
+}
+
+#chat {
     position: absolute;
     z-index: 13;
     width: 100%;
-    
+
 }
 
-#chat iframe{
+#chat iframe {
     width: 100%;
 }
 
 .bottomMenu,
 .bottomMenu2,
-.bottomMenu3 {
+.bottomMenu3,
+.bottomMenu4,
+.bottomMenu5,
+.bottomMenu6,
+.bottomMenu7,
+.bottomMenu8,
+.bottomMenu9,
+.bottomMenu10,
+.bottomMenu11,
+.bottomMenu12 {
     display: none;
 }
+
 
 ::-webkit-scrollbar {
     display: none;
@@ -289,7 +408,8 @@ video {
 #draggable {
     position: fixed;
     z-index: 12;
-    bottom: 0;
+    bottom: 55%;
+    left: 57%;
     width: 5%;
     height: auto;
     transform: rotate(4deg);
@@ -297,14 +417,43 @@ video {
     /*        border: 1px solid black;*/
 }
 
-#draggable:hover {
+#draggable:hover,
+#ref1:hover,
+#ref2:hover,
+#ref3:hover {
     width: 6%;
     cursor: grab;
 }
 
-#draggable:active {
+#draggable:active,
+#ref1:active,
+#ref2:active,
+#ref3:active {
     cursor: grabbing;
-    width: 18%;
+    width: 12%;
+}
+
+#ref1 {
+    display: none;
+    position: fixed;
+    z-index: 12;
+    bottom: 25%;
+    left: 15%;
+    width: 5%;
+    height: auto;
+    transform: rotate(4deg);
+    transition: 0.3s;
+}
+
+#ref2,
+#ref3 {
+    display: none;
+    position: fixed;
+    z-index: 12;
+    bottom: 45%;
+    left: 15%;
+    width: 5%;
+    height: auto;
 }
 
 #scroll {
@@ -350,6 +499,42 @@ video {
 
 }
 
+span.arrow-left svg,
+span.arrow-right svg {
+    display: block;
+    position: fixed;
+    background-color: transparent;
+    top: 45%;
+    color: white;
+    z-index: 12;
+    cursor: pointer;
+    fill: orangered;
+    width: 5%;
+    -webkit-transition: fill 500ms linear;
+    -moz-transition: fill 500ms linear;
+    -o-transition: fill 500ms linear;
+    -ms-transition: fill 500ms linear;
+    transition: fill 500ms linear;
+}
+
+span.arrow-left svg:hover,
+span.arrow-right svg:hover {
+    fill: red;
+}
+
+span.arrow-left svg {
+    left: 0px;
+}
+
+span.arrow-right svg {
+    left: 50%;
+}
+
+span.arrow-left:hover,
+.offer-pg span.arrow-right:hover {
+    background-color: #333;
+}
+
 
 .card:active {
     cursor: grabbing;
@@ -357,6 +542,8 @@ video {
 }
 
 .card {
+    position: relative;
     display: inline-block;
     height: 100%;
+    /*    width: 33%;*/
 }
