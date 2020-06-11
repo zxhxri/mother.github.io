@@ -45,11 +45,13 @@
     <div class="dropdown">
   <button class="dropbtn">fermented stories</button>
   <div class="dropdown-content">
-    <a href="#">kombucha</a>
+    <a href="#" onclick="dropdown3()">kombucha</a>
     <a href="#">kefir</a>
     <a href="#">sourdough</a>
   </div>
 </div>
+    
+    <div class="middle"><img id="scoby" src="scoby.png"/></div>
     
        <div class="dropdown2">
   <button class="dropbtn2">tongue acts : programme</button>
@@ -139,13 +141,23 @@
     </div>
 
      <div id="ref3"><img src="images/ref/fritz-kahn-speed_lg.jpg" width="100%"></div>
-     <div id="ref2"><img src="images/ref/culinarytriangle.png" width="100%"></div>
+     <div class="ref2" id="ref2"><img src="images/ref/culinarytriangle.png" width="100%"></div>
     
     <div id="ref1" onclick="dropdown2()"><img src="bowl_sketch.png" width="100%"></div>
 
     <div id="draggable" class="ui-widget-content" onclick="dropdown()"><img src="images/ref/flyer1.png" width="100%"></div>
 
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    
+    <script>
+      var baloon = $('.middle');
+   function runIt() {
+       baloon.animate({top:'+=20'}, 1200);
+       baloon.animate({top:'-=20'}, 1200, runIt);
+   }
+
+   runIt();
+    </script>
     
     <script>
         $(document).ready(function() {
@@ -227,6 +239,11 @@
             document.getElementById("ref2").style.display = "block";
              document.getElementById("ref3").style.display = "block";
         }
+        
+        function dropdown3() {
+            document.getElementById("scoby").style.display = "block";
+        }
+
     </script>
 
     <script>
@@ -340,6 +357,16 @@
 
         });
         
+         $(document).scroll(function() {
+            var y = $(this).scrollTop();
+            if (y > 2800) {
+                $('.ref2').fadeIn();
+            } else {
+                $('.ref2').fadeOut();
+            }
+
+        });
+        
         $(document).scroll(function() {
             var y = $(this).scrollTop();
             if (y > 3100) {
@@ -409,6 +436,8 @@
             }
 
         });
+        
+        
 
     </script>
 

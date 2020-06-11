@@ -111,17 +111,21 @@ p {
 #buttonintro {
     position: fixed;
     z-index: 12;
-    right: 40%;
+/*    right: 40%;*/
     top: 0;
     font-family: 'FreeSans';
     font-size: 20px;
-    width: auto;
+    width: 15%;
+    margin: 0 auto;
     padding: 1px 6px;
     height: auto;
     background-color: blue;
     text-align: center;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+/*    border-bottom-left-radius: 5px;*/
+/*    border-bottom-right-radius: 5px;*/
+}
+#buttonintro:hover{
+    background-color: orangered;
 }
 
 #buttonintro a {
@@ -177,7 +181,7 @@ p {
 /*    min-width: 160px;*/
     min-width: 300px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-bottom: 30px;
+    bottom: 2vw;
 }
 
 .dropdown-content a, .dropdown-content2 a {
@@ -198,6 +202,33 @@ bottom: 30px;
 
 .dropdown:hover .dropbtn, .dropdown2:hover .dropbtn2, #buttons:hover {
     background-color: orangered;
+}
+
+.middle{
+    position: fixed;
+z-index: 15;    
+    width: 100%;
+/*   user-select: none; */
+    pointer-events: none;
+    height: 100%;
+}
+
+#scoby{
+    display: none;
+    position: relative;
+    width: 20%;
+    margin: 0 auto;
+    top: 25%;
+    text-align: center;
+    vertical-align: middle;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+}
+
+.middle #scoby img{
+    -webkit-box-shadow: 0px 0px 40px -5px rgba(0,0,0,1);
+-moz-box-shadow: 0px 0px 40px -5px rgba(0,0,0,1);
+box-shadow: 0px 0px 40px -5px rgba(0,0,0,1);
 }
 
 #footer {
