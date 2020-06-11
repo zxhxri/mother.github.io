@@ -43,7 +43,7 @@ html {
 }
 
 body {
-    height: 20000px;
+    height: 22000px;
     background-color: whitesmoke;
     margin: 0;
 }
@@ -111,7 +111,7 @@ p {
 #buttonintro {
     position: fixed;
     z-index: 12;
-/*    right: 40%;*/
+    /*    right: 40%;*/
     top: 0;
     font-family: 'FreeSans';
     font-size: 20px;
@@ -121,10 +121,11 @@ p {
     height: auto;
     background-color: blue;
     text-align: center;
-/*    border-bottom-left-radius: 5px;*/
-/*    border-bottom-right-radius: 5px;*/
+    /*    border-bottom-left-radius: 5px;*/
+    /*    border-bottom-right-radius: 5px;*/
 }
-#buttonintro:hover{
+
+#buttonintro:hover {
     background-color: orangered;
 }
 
@@ -148,10 +149,11 @@ p {
     padding: 1px 6px;
 }
 
-.dropbtn, .dropbtn2 {
+.dropbtn,
+.dropbtn2 {
     background-color: transparent;
     color: black;
-/*    padding: 16px;*/
+    /*    padding: 16px;*/
     font-size: 1.5vw;
     font-family: 'FreeSans';
     border: none;
@@ -174,19 +176,21 @@ p {
     z-index: 14;
 }
 
-.dropdown-content, .dropdown-content2 {
+.dropdown-content,
+.dropdown-content2 {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-/*    min-width: 160px;*/
+    /*    min-width: 160px;*/
     min-width: 300px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     bottom: 2vw;
 }
 
-.dropdown-content a, .dropdown-content2 a {
+.dropdown-content a,
+.dropdown-content2 a {
     color: black;
-   
+
     font-family: 'FreeSans';
     font-size: 20px;
     padding: 0px 16px;
@@ -194,26 +198,33 @@ p {
     display: block;
 }
 
-.dropdown-content a:hover, .dropdown-content2 a:hover {background-color: orangered;  color: white;}
+.dropdown-content a:hover,
+.dropdown-content2 a:hover {
+    background-color: orangered;
+    color: white;
+}
 
-.dropdown:hover .dropdown-content, .dropdown2:hover .dropdown-content2 {
+.dropdown:hover .dropdown-content,
+.dropdown2:hover .dropdown-content2 {
     display: block;
 }
 
-.dropdown:hover .dropbtn, .dropdown2:hover .dropbtn2, #buttons:hover {
+.dropdown:hover .dropbtn,
+.dropdown2:hover .dropbtn2,
+#buttons:hover {
     background-color: orangered;
 }
 
-.middle{
+.middle {
     position: fixed;
-z-index: 15;    
+    z-index: 15;
     width: 100%;
-/*   user-select: none; */
+    /*   user-select: none; */
     pointer-events: none;
     height: 100%;
 }
 
-#scoby{
+.scoby {
     display: none;
     position: relative;
     width: 20%;
@@ -221,14 +232,14 @@ z-index: 15;
     top: 25%;
     text-align: center;
     vertical-align: middle;
-  -webkit-filter: drop-shadow(5px 5px 5px #222);
-  filter: drop-shadow(5px 5px 5px #222);
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
 }
 
-.middle #scoby img{
-    -webkit-box-shadow: 0px 0px 40px -5px rgba(0,0,0,1);
--moz-box-shadow: 0px 0px 40px -5px rgba(0,0,0,1);
-box-shadow: 0px 0px 40px -5px rgba(0,0,0,1);
+.middle #scoby img {
+    -webkit-box-shadow: 0px 0px 40px -5px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 40px -5px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 40px -5px rgba(0, 0, 0, 1);
 }
 
 #footer {
@@ -282,7 +293,7 @@ box-shadow: 0px 0px 40px -5px rgba(0,0,0,1);
 .box1 p {
     color: black;
     font-family: 'AWT3';
-    font-size: 6.7vw;
+    font-size: 6vw;
     text-align: center;
     letter-spacing: -0.3vw;
 }
@@ -327,19 +338,41 @@ box-shadow: 0px 0px 40px -5px rgba(0,0,0,1);
     width: 100%;
 }
 
-.word-frame {
+.narrative {
+    right: 10px;
     position: fixed;
     top: 10px;
+    width: 50%;
+}
+
+.word-frame {
+    position: fixed;
+    /*    top: 10px;*/
     right: 10px;
     z-index: 10;
-    width: 28%;
+    width: 21%;
+}
+
+.word-frame2 {
+    position: fixed;
+    right: 18%;
+    width: 21%;
 }
 
 .word-frame img {
     width: 100%;
     position: absolute;
-    border: 1px solid black;
+    border: 1px solid red;
     border-radius: 3px;
+}
+
+.word-frame2 img {
+    width: 100%;
+    position: absolute;
+    border: 1px solid blue;
+    border-radius: 3px;
+    right: 20%;
+
 }
 
 .word-frame p {
@@ -370,7 +403,65 @@ box-shadow: 0px 0px 40px -5px rgba(0,0,0,1);
 .bottomMenu9,
 .bottomMenu10,
 .bottomMenu11,
-.bottomMenu12 {
+.bottomMenu12,
+.bottomMenu13,
+.bottomMenu14,
+.bottomMenu15,
+.bottomMenu16,
+.bottomMenu17,
+.bottomMenu18,
+.bottomMenu19,
+.bottomMenu20,
+.bottomMenu21,
+.bottomMenu22,
+.bottomMenu23,
+.bottomMenu24,
+.bottomMenu25,
+.bottomMenu26,
+.bottomMenu27,
+.bottomMenu28,
+.bottomMenu28_2,
+.bottomMenu29,
+.bottomMenu30,
+.bottomMenu31,
+.bottomMenu32,
+.bottomMenu33,
+.bottomMenu34,
+.bottomMenu35,
+.bottomMenu36,
+.bottomMenu37,
+.bottomMenu38,
+.bottomMenu39,
+.bottomMenu40,
+.bottomMenu41,
+.bottomMenu42,
+.bottomMenu43,
+.bottomMenu44,
+.bottomMenu45,
+.bottomMenu46,
+.bottomMenu47,
+.bottomMenu48,
+.bottomMenu49,
+.bottomMenu50,
+.bottomMenu51,
+.bottomMenu52,
+.bottomMenu53,
+.bottomMenu54,
+.bottomMenu55,
+.bottomMenu56,
+.bottomMenu57,
+.bottomMenu58,
+.bottomMenu59,
+.bottomMenu60,
+.bottomMenu61,
+.bottomMenu62,
+.bottomMenu63,
+.bottomMenu64,
+.bottomMenu65,
+.bottomMenu66,
+.bottomMenu67,
+.bottomMenu68,
+.bottomMenu69 {
     display: none;
 }
 
