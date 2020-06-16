@@ -622,7 +622,7 @@ video {
     position: absolute;
     width: 5%;
     opacity: 0.7;
-    filter: invert(1);
+/*    filter: invert(0);*/
 }
 
 #divider {
