@@ -44,7 +44,7 @@ html {
 
 body {
     height: 22000px;
-    background-color: whitesmoke;
+    background-color: black;
     margin: 0;
 }
 
@@ -77,6 +77,7 @@ p {
     -moz-transition: top 1s;
     -webkit-transition: top 1s;
     -o-transition: top 1s;
+    box-shadow: 3px 2px 3px rgba(224,217,224,1);
 }
 
 #intro.visible {
@@ -136,7 +137,7 @@ p {
 
 #buttons a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 #buttons {
@@ -152,7 +153,7 @@ p {
 .dropbtn,
 .dropbtn2 {
     background-color: transparent;
-    color: black;
+    color: white;
     /*    padding: 16px;*/
     font-size: 1.5vw;
     font-family: 'FreeSans';
@@ -218,14 +219,41 @@ p {
 .middle {
     position: fixed;
     z-index: 15;
-    width: 100%;
+    width: 90%;
     /*   user-select: none; */
-    pointer-events: none;
-    height: 100%;
+/*    pointer-events: none;*/
+    height: 90%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: none;
+    background: url(background.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+/*    box-shadow: 5px 0px 5px rgba(224,217,224,1);*/
+    border: 3px solid orangered;
+    border-radius: 3px;
+}
+
+#close {
+    float:right;
+    display:inline-block;
+    padding:0px 5px 0px 5px;
+    background:orangered;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: 'FreeSans'
+/*    z-index: 999999;*/
+}
+
+#close:hover{
+    background: black;
 }
 
 .scoby {
-    display: none;
+    display: block;
     position: relative;
     width: 20%;
     margin: 0 auto;
@@ -236,10 +264,17 @@ p {
     filter: drop-shadow(5px 5px 5px #222);
 }
 
-.middle #scoby img {
-    -webkit-box-shadow: 0px 0px 40px -5px rgba(0, 0, 0, 1);
-    -moz-box-shadow: 0px 0px 40px -5px rgba(0, 0, 0, 1);
-    box-shadow: 0px 0px 40px -5px rgba(0, 0, 0, 1);
+.kefir {
+    display: block;
+    position: relative;
+    width: 40%;
+    left: 10%;
+/*    margin: 0 auto;*/
+    top: 15%;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
 }
 
 #footer {
@@ -305,7 +340,7 @@ p {
 
 .box2 {
     background-color: white;
-    color: darkslateblue;
+    color: black;
     font-size: 1.2vw;
     font-family: 'FreeSans', sans-serif;
 }
@@ -329,7 +364,7 @@ p {
     position: fixed;
     width: 45%;
     right: 0;
-    bottom: 40px;
+/*    bottom: 40px;*/
     z-index: 13;
 }
 
@@ -350,26 +385,26 @@ p {
     /*    top: 10px;*/
     right: 10px;
     z-index: 10;
-    width: 21%;
+    width: 25%;
 }
 
 .word-frame2 {
     position: fixed;
-    right: 18%;
-    width: 21%;
+    right: 22%;
+    width: 25%;
 }
 
 .word-frame img {
     width: 100%;
     position: absolute;
-    border: 1px solid red;
+    border: 1px solid white;
     border-radius: 3px;
 }
 
 .word-frame2 img {
     width: 100%;
     position: absolute;
-    border: 1px solid blue;
+    border: 1px solid white;
     border-radius: 3px;
     right: 20%;
 
@@ -393,6 +428,8 @@ p {
 }
 
 .bottomMenu,
+.bottomMenu0,
+.bottomMenu1,
 .bottomMenu2,
 .bottomMenu3,
 .bottomMenu4,
@@ -578,6 +615,7 @@ video {
     height: auto;
 }
 
+
 #scroll {
     bottom: -25%;
     right: 2%;
@@ -601,7 +639,7 @@ video {
 
 
 .dragscroll {
-    width: 55%;
+    width: 40%;
     left: 0;
     height: 100%;
     top: 0;
@@ -616,7 +654,7 @@ video {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    box-shadow: 5px 0px 5px rgba(34, 34, 34, 0.6);
+    box-shadow: 5px 0px 5px rgba(224,217,224,1);
     background-color: transparent;
 
 }

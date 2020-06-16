@@ -36,6 +36,11 @@
         </div>
 
     </div>
+    
+ <iframe src="audio/silence.mp3" type="audio/mpeg" allow="autoplay" id="audio" style="display:none"></iframe>
+<audio autoplay>
+<source src="audio/stomach.mp3" type="audio/mpeg">
+</audio>
     <img src="scroll.gif" id="scroll" />
 
 
@@ -43,15 +48,15 @@
      <p id="buttons"><a href="#footer">go to end ...</a></p>
     
     <div class="dropdown">
-  <button class="dropbtn">fermented stories</button>
+  <button class="dropbtn" onclick="dropdown3()">fermented stories</button>
   <div class="dropdown-content">
-    <a href="#" onclick="dropdown3()">kombucha</a>
+    <a href="#">kombucha</a>
     <a href="#">kefir</a>
     <a href="#">sourdough</a>
   </div>
 </div>
     
-    <div class="middle"><img class="scoby" id="scoby" src="scoby.png"/></div>
+    <div class="middle" id="middle" style="background-color:rgba(0, 0, 0, 0.5);"> <span id="close" onclick="dropdown4()">leave</span><img class="scoby" id="scoby" src="scoby.png"/><img class="kefir" id="kefir" src="kefir.png"/></div>
     
        <div class="dropdown2">
   <button class="dropbtn2">tongue acts : programme</button>
@@ -71,18 +76,18 @@
 <!--        <p>word-play&#8482; narrative</p>-->
         <img class="bottomMenu" src="images/words/word86.png">
 
-        <img class="bottomMenu2" src="images/words/word55.png">
+        <img class="bottomMenu0" src="images/words/word55.png">
 
-        <img class="bottomMenu3" src="images/words/word52.png">
-        <img class="bottomMenu4" src="images/words/word82.png">
+        <img class="bottomMenu1" src="images/words/word52.png">
+        <img class="bottomMenu2" src="images/words/word82.png">
         
-        <img class="bottomMenu5" src="images/words/word81.png">
+        <img class="bottomMenu3" src="images/words/word81.png">
         
-        <img class="bottomMenu6" src="images/words/word53.png">
+        <img class="bottomMenu4" src="images/words/word53.png">
         
-        <img class="bottomMenu7" src="images/words/word59.png">
+        <img class="bottomMenu5" src="images/words/word59.png">
         
-        <img class="bottomMenu8" src="images/words/word60.png">
+        <img class="bottomMenu6" src="images/words/word60.png">
         
         <img class="bottomMenu7" src="images/words/word62.png">
         
@@ -221,9 +226,11 @@
     
     </div>
 
+<!--
     <div class="prop-frame">
         <img class="prop1" src="images/prop1.png">
     </div>
+-->
 
     
 <!--
@@ -272,7 +279,7 @@
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
     
     <script>
-      var baloon = $('.scoby');
+      var baloon = $('.scoby, .kefir');
    function runIt() {
        baloon.animate({top:'+=20'}, 1200);
        baloon.animate({top:'-=20'}, 1200, runIt);
@@ -280,7 +287,8 @@
 
    runIt();
     </script>
-    
+        
+       
     <script>
         $(document).ready(function() {
 
@@ -363,7 +371,11 @@
         }
         
         function dropdown3() {
-            document.getElementById("scoby").style.display = "block";
+            document.getElementById("middle").style.display = "block";
+        }
+        
+        function dropdown4() {
+            document.getElementById("middle").style.display = "none";
         }
 
     </script>
@@ -409,12 +421,33 @@
 -->
 
     <script>
-        $(document).scroll(function() {
+        
+          $(document).scroll(function() {
             var y = $(this).scrollTop();
-            if (y > 1000) {
+            if (y > 800) {
                 $('.bottomMenu').fadeIn();
             } else {
                 $('.bottomMenu').fadeOut();
+            }
+
+        });
+        
+        $(document).scroll(function() {
+            var y = $(this).scrollTop();
+            if (y > 900) {
+                $('.bottomMenu0').fadeIn();
+            } else {
+                $('.bottomMenu0').fadeOut();
+            }
+
+        });
+
+        $(document).scroll(function() {
+            var y = $(this).scrollTop();
+            if (y > 1000) {
+                $('.bottomMenu1').fadeIn();
+            } else {
+                $('.bottomMenu1').fadeOut();
             }
 
         });
@@ -428,8 +461,8 @@
             }
 
         });
-
-        $(document).scroll(function() {
+        
+          $(document).scroll(function() {
             var y = $(this).scrollTop();
             if (y > 1600) {
                 $('.bottomMenu3').fadeIn();
@@ -459,7 +492,7 @@
 
         });
         
-          $(document).scroll(function() {
+        $(document).scroll(function() {
             var y = $(this).scrollTop();
             if (y > 2500) {
                 $('.bottomMenu6').fadeIn();
@@ -479,15 +512,6 @@
 
         });
         
-         $(document).scroll(function() {
-            var y = $(this).scrollTop();
-            if (y > 2800) {
-                $('.ref2').fadeIn();
-            } else {
-                $('.ref2').fadeOut();
-            }
-
-        });
         
         $(document).scroll(function() {
             var y = $(this).scrollTop();
@@ -1121,15 +1145,15 @@
         });
 
       
-        $(document).scroll(function() {
-            var y = $(this).scrollTop();
-            if (y > 2500 && y < 2800) {
-                $('.prop1').fadeIn();
-            } else {
-                $('.prop1').fadeOut();
-            }
-
-        });
+//        $(document).scroll(function() {
+//            var y = $(this).scrollTop();
+//            if (y > 2500 && y < 2800) {
+//                $('.prop1').fadeIn();
+//            } else {
+//                $('.prop1').fadeOut();
+//            }
+//
+//        });
         
         
         
