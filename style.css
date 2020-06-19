@@ -48,7 +48,7 @@ body {
     margin: 0;
 }
 
-* {
+*, *:before, *:after {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -151,7 +151,8 @@ p {
 }
 
 .dropbtn,
-.dropbtn2 {
+.dropbtn2,
+#map_button{
     background-color: transparent;
     color: white;
     /*    padding: 16px;*/
@@ -159,6 +160,31 @@ p {
     font-family: 'FreeSans';
     border: none;
     cursor: pointer;
+}
+
+#map_button{
+    position: fixed;
+    float: right;
+    display: inline-block;
+    width: 30px;
+/*    right: 0;*/
+    z-index: 14;
+    bottom: 10px;
+    left: 10px;
+}
+
+#map{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+#map img{
+/*    width: 100%;*/
+    height: 100%;
+    margin: 0 auto;
 }
 
 .dropdown2 {
@@ -502,6 +528,10 @@ p {
     display: none;
 }
 
+.bottomMenu28_2, .bottomMenu31{
+    filter: brightness(0.4);
+}
+
 
 ::-webkit-scrollbar {
     display: none;
@@ -605,6 +635,8 @@ p {
 }
 */
 
+
+
 .card {
     
     position: relative;
@@ -633,24 +665,25 @@ p {
 #slideout {
     background: black;
     position: fixed;
-    width: 393px;
+/*    width: 403px;*/
     height: 100%;
     left:-393px;
-    padding-right: 20px;
+    
     z-index: 10;
-    overflow-x: hidden;
+    overflow-x: visible;
     overflow-y: scroll;
     box-shadow: 5px 0px 5px rgba(255, 69, 0, 1);
+    -webkit-box-shadow: 5px 0px 5px rgba(255, 69, 0, 1);
 }
     
-#clickme {
+#clickme { 
     position: fixed;
     top: 45%; 
     left: 0;
     height: 100px;
     width: 25px;
-    background: orangered;
-    color: black;
+    background: rgb(255, 69, 0);
+    color: rgb(0, 0, 0);
     cursor: pointer;
 }
 
@@ -666,6 +699,7 @@ p {
     -moz-filter: grayscale(100%);
     filter: grayscale(100%);
     transition: all 0.5s ease;
+    overflow: visible;
 }
 
 #slidecontent:hover{
@@ -675,7 +709,6 @@ p {
 }
 #clickme p{
     writing-mode: vertical-rl;
-/*    margin-bottom: 0;*/
     font-size: 20px;
     font-family: 'FreeSans';
     line-height: 29px;

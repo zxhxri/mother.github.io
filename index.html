@@ -58,16 +58,19 @@
     
     <div class="middle" id="middle" style="background-color:rgba(0, 0, 0, 0.5);"> <span id="close" onclick="dropdown4()">leave</span><img class="scoby" id="scoby" src="scoby.png"/><img class="kefir" id="kefir" src="kefir.png"/></div>
     
+    
        <div class="dropdown2">
+            
   <button class="dropbtn2">tongue acts : programme</button>
   <div class="dropdown-content2">
       <a href="#">fermentation workshop <span style="font-size: 70%;">physical</span> </a>
       <a href="#">masha ru : geophagia <span style="font-size: 70%;">online chat</span></a>
       <a href="#">lekkernassuh <span style="font-size: 70%;">online chat</span></a>
   </div>
-</div>
-    
-    
+    </div>
+
+    <div id="map_button">MAP</div>
+    <div id="map"><img src="images/map.png"></div>
  
     <div id="footer">Footer</div>
 <!--    <div class="prog"><p>Tongue Acts Programme:<br>Fermentation Lecture<br style="border-bottom: 1px solid black">Geophagia Online Chat</p></div>-->
@@ -309,6 +312,11 @@
         function dropdown4() {
             document.getElementById("middle").style.display = "none";
         }
+        
+         function dropdown5() {
+            document.getElementById("map").style.display = "block";
+        }
+
 
     </script>
 
@@ -1104,6 +1112,14 @@
                     $("#draggable, #ref1, #ref2, #ref3").draggable();
                 });
 
+    </script>
+    
+    <script>
+   $( "#map_button" ).click(function() {
+  $( "#map" ).toggle( "slow", function() {
+    // Animation complete.
+  });
+});
     </script>
     
     <script src="https://cdn.plyr.io/3.6.2/plyr.js"></script>
