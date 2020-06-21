@@ -38,6 +38,11 @@
     src: url(fonts/SoyuzGroteskBold.otf);
 }
 
+@font-face {
+    font-family: Helv;
+    src: url(fonts/HelveticaNeueLTBG.ttf);
+}
+
 html {
     /*    background-color: black;*/
 }
@@ -67,7 +72,7 @@ p {
 }
 
 #intro {
-    background-color: white;
+    background-color: whitesmoke;
     z-index: 15;
     height: 100%;
     position: absolute;
@@ -346,7 +351,7 @@ p {
 }
 
 .box1 {
-    background-color: white;
+    background-color: transparent;
 
     /*    word-break: break-all;*/
 }
@@ -365,17 +370,18 @@ p {
 }
 
 .box2 {
-    background-color: white;
+    background-color: transparent;
     color: black;
-    font-size: 1.2vw;
-    font-family: 'FreeSans', sans-serif;
+    font-size: 2.2vw;
+    line-height: 2.6vw;
+    font-family: 'Helv','FreeSans', sans-serif;
 }
 
 .box3 {
-    background-color: white;
+    background-color: transparent;
     color: black;
-    font-size: 1.2vw;
-    font-family: 'FreeSans', sans-serif;
+    font-size: 1.5vw;
+    font-family:  'FreeSans', sans-serif;
 
 }
 
@@ -383,7 +389,7 @@ p {
     background-color: orangered;
     font-size: 4vw;
     text-align: center;
-    font-family: Times, serif;
+    font-family: 'Helv',Times, serif;
 }
 
 .prop-frame {
@@ -403,7 +409,8 @@ p {
     right: 10px;
     position: fixed;
     top: 10px;
-    width: 100%;
+    width: 82%;
+    height: 52%;
 }
 
 .word-frame {
@@ -440,6 +447,41 @@ p {
     font-family: 'FreeSans';
     font-size: 20px;
     text-align: center;
+}
+
+.subtitles{
+    position: absolute;
+    width: 48%;
+    height: 20%;
+    right: 0px;
+    bottom: 0;
+/*    background: url(floor.jpg);*/
+    border-radius: 5px;
+    transform: skew(30deg);
+}
+
+.subtitles2 {
+    position: absolute;
+    width: 48%;
+    height: 20%;
+    left: 0px;
+    bottom: 0;
+    transform: skew(-30deg);
+}
+
+.subtitles p, .subtitles2 p{
+    color: #ffff66;
+    background-color: transparent;
+    font-family: 'Helv';
+    font-size: 1.6vw;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.sub1, .sub2, .sub3, .sub4, .sub5, .sub6, .sub7, .sub8,.sub9, .sub10, .sub11, .sub12, .sub13, .sub14, .sub15, .sub16, .sub17, .sub18, .sub19, .sub20, .sub21, .sub22, .sub23, .sub24, .sub25, .sub26, .sub27, .sub28, .sub29{
+    display: none;
 }
 
 #chat {
@@ -486,7 +528,8 @@ p {
 .bottomMenu28_2,
 .bottomMenu29,
 .bottomMenu30,
-.bottomMenu31,
+.bottomMenu31, 
+.bottomMenu31_1,
 .bottomMenu32,
 .bottomMenu33,
 .bottomMenu34,
@@ -494,6 +537,7 @@ p {
 .bottomMenu36,
 .bottomMenu37,
 .bottomMenu38,
+.bottomMenu38_1,
 .bottomMenu39,
 .bottomMenu40,
 .bottomMenu41,
@@ -542,8 +586,8 @@ p {
 #draggable {
     position: fixed;
     z-index: 12;
-    bottom: 55%;
-    left: 57%;
+    bottom: 10%;
+    left: 10%;
     width: 5%;
     height: auto;
     transform: rotate(4deg);
