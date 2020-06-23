@@ -116,7 +116,7 @@ p {
 
 #buttonintro {
     position: fixed;
-    z-index: 12;
+    z-index: 14;
     /*    right: 40%;*/
     top: 0;
     font-family: 'FreeSans';
@@ -167,29 +167,26 @@ p {
     cursor: pointer;
 }
 
-#map_button{
+#audio {
     position: fixed;
-    float: right;
-    display: inline-block;
-    width: 30px;
-/*    right: 0;*/
+  background-color: white;
+    font-size: 21.5px;
+    padding-left: 10px;
+    padding-right: 10px;
+  border: none;
+  color: blue;
+    left: 200px;
+  text-decoration: none;
+  cursor: pointer;
     z-index: 14;
-    bottom: 10px;
-    left: 10px;
+    font-family: 'FreeSans', sans-serif;
+    border-bottom-right-radius: 3px;
+     cursor: pointer;
 }
 
-#map{
-    display: none;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-}
-
-#map img{
-/*    width: 100%;*/
-    height: 100%;
-    margin: 0 auto;
+#audio:hover{
+    background-color: orangered;
+    cursor: pointer;
 }
 
 .dropdown2 {
@@ -308,6 +305,20 @@ p {
     filter: drop-shadow(5px 5px 5px #222);
 }
 
+.sour{
+     display: block;
+    position: fixed;
+    width: 20%;
+    right: 10%;
+    /*    margin: 0 auto;*/
+    top: 55%;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+    
+}
+
 #footer {
     position: fixed;
     bottom: -20000px;
@@ -387,30 +398,19 @@ p {
 
 .box4 {
     background-color: orangered;
-    font-size: 4vw;
+    font-size: 3vw;
     text-align: center;
-    font-family: 'Helv',Times, serif;
+    font-family: 'Helv', Times, serif;
 }
 
-.prop-frame {
-    position: fixed;
-    width: 45%;
-    right: 0;
-    /*    bottom: 40px;*/
-    z-index: 13;
-}
 
-.prop-frame img {
-    display: none;
-    width: 100%;
-}
 
 .narrative {
     right: 10px;
     position: fixed;
     top: 10px;
     width: 82%;
-    height: 52%;
+    height: 53%;
 }
 
 .word-frame {
@@ -457,7 +457,8 @@ p {
     bottom: 0;
 /*    background: url(floor.jpg);*/
     border-radius: 5px;
-    transform: skew(30deg);
+    transform: skew(20deg);
+    z-index: 13;
 }
 
 .subtitles2 {
@@ -466,11 +467,12 @@ p {
     height: 20%;
     left: 0px;
     bottom: 0;
-    transform: skew(-30deg);
+    transform: skew(-20deg);
+    z-index: 13;
 }
 
 .subtitles p, .subtitles2 p{
-    color: #ffff66;
+    color: #ffff4c;
     background-color: transparent;
     font-family: 'Helv';
     font-size: 1.6vw;
@@ -592,47 +594,99 @@ p {
     height: auto;
     transform: rotate(4deg);
     transition: 0.3s;
+     color: whitesmoke;
+    font-size: 3px;
+    white-space: nowrap;
     /*        border: 1px solid black;*/
 }
 
 #draggable:hover,
 #ref1:hover,
-#ref2:hover,
-#ref3:hover {
+#prop1:hover, #prop2:hover, #prop3:hover{
     width: 6%;
     cursor: grab;
+     z-index: 999999;
 }
 
-#draggable:active,
-#ref1:active,
-#ref2:active,
-#ref3:active {
+#draggable:active {
     cursor: grabbing;
-    width: 12%;
+    width: 15%;
+    font-size: 20px;
+    white-space: pre-line;
+         z-index: 999999;
+}
+#prop1:active, #prop2:active, #prop3:active 
+    {
+    cursor: grabbing;
+    width: 25%;
+    font-size: 20px;
+    white-space: pre-line;
+         z-index: 999999;
 }
 
 #ref1 {
-    display: none;
     position: fixed;
     z-index: 12;
     bottom: 25%;
     left: 15%;
     width: 5%;
     height: auto;
-    transform: rotate(4deg);
+    transform: rotate(-1deg);
     transition: 0.3s;
 }
 
-#ref2,
-#ref3 {
-    display: none;
+#prop1 {
     position: fixed;
     z-index: 12;
-    bottom: 45%;
-    left: 15%;
+    bottom: 25%;
+    right: 15%;
     width: 5%;
     height: auto;
+    transform: rotate(-1deg);
+    transition: 0.3s;
+    transition: 0.3s;
+     color: whitesmoke;
+    font-size: 3px;
+    white-space: nowrap;
 }
+
+#prop2 {
+    position: fixed;
+    z-index: 12;
+    bottom: 25%;
+    right: 19%;
+    width: 5%;
+    height: auto;
+    transform: rotate(1deg);
+    transition: 0.3s;
+    transition: 0.3s;
+     color: whitesmoke;
+    font-size: 3px;
+    white-space: nowrap;
+}
+
+#prop3 {
+    position: fixed;
+    z-index: 12;
+    bottom: 20%;
+    right: 17%;
+    width: 5%;
+    height: auto;
+    transform: rotate(0deg);
+    transition: 0.3s;
+    transition: 0.3s;
+     color: whitesmoke;
+    font-size: 3px;
+    white-space: nowrap;
+}
+
+#ref1:active {
+    cursor: grabbing;
+    width: 25%;
+    z-index: 999999;
+}
+
+
 
 
 #scroll {
@@ -713,7 +767,7 @@ p {
     height: 100%;
     left:-393px;
     
-    z-index: 10;
+    z-index: 13;
     overflow-x: visible;
     overflow-y: scroll;
     box-shadow: 5px 0px 5px rgba(255, 69, 0, 1);
@@ -729,6 +783,8 @@ p {
     background: rgb(255, 69, 0);
     color: rgb(0, 0, 0);
     cursor: pointer;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 #clickme:hover{
@@ -756,4 +812,6 @@ p {
     font-size: 20px;
     font-family: 'FreeSans';
     line-height: 29px;
+    height: 100%;
+    text-align: center;
 }

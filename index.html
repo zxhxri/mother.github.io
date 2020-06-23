@@ -28,20 +28,22 @@
                 <div><p>A language fiction situated in a web-based, own-paced narrative based on food production practices which extended beyond the kitchen by means of fermentation &#9850; An organic and symbiotic form of change and growth.</p></div>
             </div>
             <div class="box box3">
-                <div><p>The narrative develops through a building and breaking of etymologies and building blocks of certain terms, word-making— a political act. By understanding how language creates collective conventions, we can play with it to subvert them. The multiple storylines draw parallels and perpendiculars between language, collective rituals, industrial work and domestic food production through a historical, linguistic and associative lens. Dirty knowledge. 
+                <div><p>The narrative develops through a building and breaking of etymologies and building blocks of certain terms,  word-making as a political act.<br> By understanding how language creates collective conventions, we can play with it to subvert them. The multiple open-ended storylines draw parallels and perpendiculars between language, collective rituals, industrial work and domestic food production through a historical, linguistic and associative lens. Dirty knowledge. 
 </p></div>
             </div>
             <div class="box box4">
-                <div>language and taste<br>&lt;————————&gt;</div>
+                <div>Language and Taste<br>&#123;————————&#125;</div>
             </div>
         </div>
 
     </div>
     
- <iframe src="audio/silence.mp3" type="audio/mpeg" allow="autoplay" id="audio" style="display:none"></iframe>
-<audio autoplay>
-<source src="audio/stomach.mp3" type="audio/mpeg">
+    <audio id="audio" src="audio/stomach.mp3" preload="auto">
 </audio>
+<a id="audio" onClick="togglePlay()">&#9835;</a>
+     
+   
+
     <img src="scroll.gif" id="scroll" />
 
 
@@ -49,19 +51,28 @@
      <p id="buttons"><a href="#footer">go to end ...</a></p>
     
     <div class="dropdown">
-  <button class="dropbtn" onclick="dropdown3()">fermented stories</button>
+  <button class="dropbtn" onclick="dropdown3()">fermented critters</button>
 </div>
     
-    <div class="middle" id="middle" style="background-color:rgba(0, 0, 0, 0.5);"> <span id="close" onclick="dropdown4()">leave</span><img class="scoby" id="scoby" src="scoby.png"/><img class="kefir" id="kefir" src="kefir.png"/></div>
+    <div class="middle" id="middle" style="background-color:rgba(0, 0, 0, 0.5);"> <span id="close" onclick="dropdown4()">leave</span><a onClick="togglePlayScoby()"><img class="scoby" id="scoby" src="scoby.png"/></a><a onClick="togglePlayKefir()"><img class="kefir" id="kefir" src="kefir.png"/></a><a  onClick="togglePlaySour()">
+        <img class="sour" id="sour" src="sour.png"/></a></div>
     
+    
+    <audio id="audio_scoby" src="audio/scoby.mp3" preload="auto">
+</audio>
+    <audio id="audio_kefir" src="audio/kefir.mp3" preload="auto">
+</audio>
+    <audio id="audio_sour" src="audio/sour.mp3" preload="auto">
+</audio>
     
        <div class="dropdown2">
             
-  <button class="dropbtn2">tongue acts : programme</button>
+  <button class="dropbtn2">tongue acts: tba</button>
   <div class="dropdown-content2">
       <a href="#">fermentation workshop <span style="font-size: 70%;">physical</span> </a>
       <a href="#">masha ru : geophagia <span style="font-size: 70%;">online chat</span></a>
       <a href="#">lekkernassuh <span style="font-size: 70%;">online chat</span></a>
+       <a href="#">prop building <span style="font-size: 70%;">ongoing onsite</span></a>
   </div>
     </div>
 
@@ -309,15 +320,15 @@ and red wiggler worms composting organic material to enhance soil
     
     <div id="slideout">
     <div id="slidecontent">
-         <div class="card"><p>Chapter 1. The Other Companion<br>What do we consider a companion? A dog? A frog? What about a colony of bacteria? The microorganisms present in fermentation I consider companions for the deep future.</p><video onclick="this.paused ? this.play() : this.pause();" height="100%" id="short1" preload="none" poster="short1.png">
+         <div class="card"><p>—<br>Chapter 1. The Other Companion<br>—<br>What do we consider a companion? A dog? A frog? What about a colony of bacteria? The microorganisms present in fermentation I consider companions for the deep future.</p><video onclick="this.paused ? this.play() : this.pause();" height="100%" id="short1" preload="none" poster="short1.png">
                 <source src="Short1.mp4" type="video/mp4">
             </video></div>
-    <div class="card"><p>Chapter 2. M(Other)</p><video onclick="this.paused ? this.play() : this.pause();" height="100%" id="short2" preload="none" poster="short2.png">
+    <div class="card"><p>—<br>Chapter 2. M(Other)<br>—<br>Who do we call a mother? The body is a point of entry and departure: food, words, mater. What is sensible and/or ethical production? </p><video onclick="this.paused ? this.play() : this.pause();" height="100%" id="short2" preload="none" poster="short2.png">
                 <source src="Short2.mp4" type="video/mp4"></video></div>
-        <div class="card"><p>Chapter 3. Com</p><video onclick="this.paused ? this.play() : this.pause();" height="100%" id="short3" preload="none" poster="short3.png">
+        <div class="card"><p>—<br>Chapter 3. Com<br>—<br>companion > com + panis > together with bread<br>Is public property the only way to have shared assets? Divide &amp; Conquer or Liberate &amp; Share? Collective action can move mountains, or break a bread.</p><video onclick="this.paused ? this.play() : this.pause();" height="100%" id="short3" preload="none" poster="short3.png">
                 <source src="Short3.mp4" type="video/mp4"></video></div>
     </div>
-    <div id="clickme"><p>Shorts</p>
+    <div id="clickme"><p>κόλλα–ge</p>
     </div>
 </div>
     
@@ -339,14 +350,21 @@ and red wiggler worms composting organic material to enhance soil
 -->
 
 
-    <div id="draggable" class="ui-widget-content"><img src="images/ref/flyer1.png" width="100%"></div>
+    <div id="draggable" class="ui-widget-content"><img src="images/ref/flyer1.png" width="100%"><figcaption>Octavia E. Butler’s notes on writing, ca. 1970–95</figcaption></div>
+    <div id="ref1" class="ui-widget-content"><img src="images/ref/flyer2.jpg" width="100%"></div>
+    
+    <div id="prop1" class="ui-widget-content"><img src="images/prop1.jpeg" width="100%"><figcaption>Prototype of amphora</figcaption></div>
+    
+     <div id="prop2" class="ui-widget-content"><img src="images/prop2.jpeg" width="100%"><figcaption>Prototype of playground</figcaption></div>
+    
+     <div id="prop3" class="ui-widget-content"><img src="images/prop3.jpeg" width="100%"><figcaption>Prototype of table</figcaption></div>
 
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
     
     <script src="https://code.jquery.com/jquery-1.7.2.js "></script>
     
     <script>
-      var baloon = $('.scoby, .kefir');
+      var baloon = $('.scoby, .kefir, .sour');
    function runIt() {
        baloon.animate({top:'+=20'}, 1200);
        baloon.animate({top:'-=20'}, 1200, runIt);
@@ -1305,6 +1323,78 @@ and red wiggler worms composting organic material to enhance soil
 
     </script>
 
+     <script>
+      var myAudio = document.getElementById("audio");
+var isPlaying = false;
+
+function togglePlay() {
+  if (isPlaying) {
+    myAudio.pause()
+  } else {
+    myAudio.play();
+  }
+};
+myAudio.onplaying = function() {
+  isPlaying = true;
+};
+myAudio.onpause = function() {
+  isPlaying = false;
+};
+         
+          var myAudioScoby = document.getElementById("audio_scoby");
+var isPlayingScoby = false;
+
+function togglePlayScoby() {
+  if (isPlayingScoby) {
+    myAudioScoby.pause()
+  } else {
+    myAudioScoby.play();
+  }
+};
+myAudioScoby.onplaying = function() {
+  isPlayingScoby = true;
+};
+myAudioScoby.onpause = function() {
+  isPlayingScoby = false;
+};
+         
+          var myAudioKefir = document.getElementById("audio_kefir");
+var isPlayingKefir = false;
+
+function togglePlayKefir() {
+  if (isPlayingKefir) {
+    myAudioKefir.pause()
+  } else {
+    myAudioKefir.play();
+  }
+};
+myAudioKefir.onplaying = function() {
+  isPlayingKefir = true;
+};
+myAudioKefir.onpause = function() {
+  isPlayingKefir = false;
+};
+         
+          var myAudioSour = document.getElementById("audio_sour");
+var isPlayingSour = false;
+
+function togglePlaySour() {
+  if (isPlayingSour) {
+    myAudioSour.pause()
+  } else {
+    myAudioSour.play();
+  }
+};
+myAudioSour.onplaying = function() {
+  isPlayingSour = true;
+};
+myAudioSour.onpause = function() {
+  isPlayingSour = false;
+};
+    </script>
+  <script>
+     
+    </script>
 
 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -1312,7 +1402,7 @@ and red wiggler worms composting organic material to enhance soil
 
     <script>
                 $(function() {
-                    $("#draggable, #ref1, #ref2, #ref3").draggable();
+                    $("#draggable, #ref1, #ref2, #ref3, #prop1, #prop2, #prop3").draggable();
                 });
 
     </script>
