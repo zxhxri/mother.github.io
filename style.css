@@ -596,7 +596,7 @@ p {
     transition: 0.3s;
      color: whitesmoke;
     font-size: 3px;
-    white-space: nowrap;
+    white-space: pre-line;
     /*        border: 1px solid black;*/
 }
 
@@ -605,6 +605,12 @@ p {
 #prop1:hover, #prop2:hover, #prop3:hover{
     width: 6%;
     cursor: grab;
+     z-index: 999999;
+}
+
+#ref2:hover{
+    width: 12%;
+     cursor: grab;
      z-index: 999999;
 }
 
@@ -635,6 +641,20 @@ p {
     transition: 0.3s;
 }
 
+#ref2 {
+    position: fixed;
+    z-index: 12;
+    bottom: 3%;
+    left: 19%;
+    width: 6%;
+    height: auto;
+    transform: rotate(0deg);
+    transition: 0.3s;
+    color: whitesmoke;
+    font-size: 3px;
+    white-space: pre-line;
+}
+
 #prop1 {
     position: fixed;
     z-index: 12;
@@ -647,7 +667,7 @@ p {
     transition: 0.3s;
      color: whitesmoke;
     font-size: 3px;
-    white-space: nowrap;
+    white-space: pre-line;
 }
 
 #prop2 {
@@ -662,7 +682,7 @@ p {
     transition: 0.3s;
      color: whitesmoke;
     font-size: 3px;
-    white-space: nowrap;
+    white-space: pre-line;
 }
 
 #prop3 {
@@ -677,13 +697,15 @@ p {
     transition: 0.3s;
      color: whitesmoke;
     font-size: 3px;
-    white-space: nowrap;
+    white-space: pre-line;
 }
 
-#ref1:active {
+#ref1:active, #ref2:active {
     cursor: grabbing;
     width: 25%;
     z-index: 999999;
+    font-size: 20px;
+    white-space: pre-line;
 }
 
 
